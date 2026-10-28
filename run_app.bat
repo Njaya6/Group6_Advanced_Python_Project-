@@ -1,15 +1,19 @@
 @echo off
-echo ========================================================
-echo   Launching QuantPulse AI - Stock Market Sense Platform
-echo ========================================================
+title QuantPulse AI - Real-Time Stock Market Launcher
+echo ====================================================================
+echo   QuantPulse AI: Real-Time Stock Market Intelligence Platform
+echo ====================================================================
 echo.
-echo 1. Starting FastAPI Python Backend Server (Port 8000)...
-start "QuantPulse API Backend" python backend/main.py
+echo [1/2] Initializing Real-Time FastAPI Market Gateway on port 8000...
+start "QuantPulse Real-Time API" python backend/main.py
 echo.
-echo 2. Opening Dashboard in your browser...
+echo [2/2] Launching interactive interface in your browser...
 timeout /t 2 /nobreak > nul
 start index.html
 echo.
-echo ========================================================
-echo   System running! Close the terminal window to stop.
-echo ========================================================
+echo ====================================================================
+echo   Live system active!
+echo   - Backend URL: http://127.0.0.1:8000
+echo   - Swagger Docs: http://127.0.0.1:8000/docs
+echo   - Ticker Search: Enter any stock symbol (RELIANCE, INFY, NVDA, TSLA)
+echo ====================================================================

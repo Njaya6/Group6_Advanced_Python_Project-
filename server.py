@@ -44,5 +44,7 @@ def main():
             print("\nShutting down QuantPulse AI server. Good luck with your presentation!")
             httpd.server_close()
 
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+    import uvicorn
+    # Change port from 8000 to 8005
+    uvicorn.run("main:app", host="127.0.0.1", port=8005, reload=True)
